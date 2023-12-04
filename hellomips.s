@@ -57,3 +57,9 @@ illegal_error:
     la $a0, error
     syscall
     j main
+
+calculate_gcd:
+    move $a0, $s0
+    move $a1, $s1
+    jal gcd
+    move $s3, $v0, 
