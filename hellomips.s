@@ -62,4 +62,8 @@ calculate_gcd:
     move $a0, $s0
     move $a1, $s1
     jal gcd
-    move $s3, $v0, 
+    move $s3, $v0
+
+    li $v0, 1
+    move $a0, $s3
+    syscall
