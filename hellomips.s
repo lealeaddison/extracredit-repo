@@ -19,4 +19,14 @@ gcd_loop:
 gcd_done:
     move $v0, $t0 # GCD is in $v0
     jr $ra
+
 main:
+
+input_L:
+    li $v0, 4
+    la $a0, promptL
+    syscall
+    li $v0, 5
+    syscall
+    blt $v0, 21, input_L # check if L is greater than 20
+    move $s0, $v0 # save L in $s0
