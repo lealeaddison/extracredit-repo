@@ -51,3 +51,9 @@ input_N:
     blt $s1, 1, illegal_error
     blt $s2, 1, illegal_error
     j calculate_gcd
+
+illegal_error:
+    li $v0, 4
+    la $a0, error
+    syscall
+    j main
