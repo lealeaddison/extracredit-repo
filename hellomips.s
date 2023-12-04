@@ -46,4 +46,8 @@ input_N:
     blt $v0, 21, input_N
     move $s2, $v0
 
-    
+    # check for illegal numms
+    blt $s0, 1, illegal_error
+    blt $s1, 1, illegal_error
+    blt $s2, 1, illegal_error
+    j calculate_gcd
