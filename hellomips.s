@@ -45,6 +45,7 @@ input_N:
     la $a0, promptN
     syscall
     li $v0, 5
+    syscall
     blt $v0, 21, input_N
     move $s2, $v0
 
