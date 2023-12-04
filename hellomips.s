@@ -39,4 +39,11 @@ input_M:
     blt $v0, 21, input_M
     move $s1, $v0
 
+input_N:
+    li $v0, 4
+    la $a0, promptN
+    syscall
+    blt $v0, 21, input_N
+    move $s2, $v0
 
+    
